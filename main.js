@@ -1,0 +1,1 @@
+document.body.appendChild(function(){let e=document.createElement("p");return e.textContent="Bababooee",e}());
