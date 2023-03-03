@@ -1,13 +1,11 @@
 //import tabs from external modules
-
-/*
-const tabOne = require('./tab-one.js');
-const tabTwo = require('./tab-two.js');
-const tabThree = require('./tab-three.js');
-*/
 const {buildHeader} = require('./header.js');
+const {defaultContent} = require('./default-content.js');
+const {buildFooter} = require('./footer.js');
+const {addMenu} = require('./menu.js');
 
 const mainContent = document.getElementById('mainContent');
+const tabDiv = document.getElementsByClassName('tabDiv');
 
 //import stylesheet
 import './style.css';
@@ -19,7 +17,10 @@ function landingPageStructure(){
     buildHeader(header);
     
     const main = document.createElement('main');
+    main.id = 'main';
+    defaultContent(main);
     const footer = document.createElement('footer');
+    buildFooter(footer);
 
     return [header, main, footer];
 }
@@ -30,4 +31,31 @@ const mainElements = landingPageStructure();
 for (let i = 0; i < mainElements.length; i++) {
     mainContent.appendChild(mainElements[i]);
 }
+
+function clearMain() {
+    const main = document.getElementById('main');
+    for (let i = 0; i < main.children.length; i++) {
+        main.children[i].remove();
+    }
+}
+
+function changePage(){
+    const main = document.getElementById('main');
+    for (let i = 0; i < tabDiv.length; i++) {
+        let e = tabDiv[i];
+        e.addEventListener('click', function(){
+            switch (e.id) {
+                case "home":
+                    clearMain();
+                    defaultContent(main);
+                    break;
+                case "menu":
+                    clearMain();
+                    addMenu(main);
+                    break;
+            }
+        })
+    }
+}
+changePage();
 
