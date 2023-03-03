@@ -1,3 +1,55 @@
-.myClass {
-    color: red;
+html {
+    width: 100%;
+    height: 100%;
+    --bg-color: #fb923c;
+    --main: #fdba74;
+    --text: #7c2d12;
+    --accent: #ffedd5;
+    --border: 2px solid #7c2d12;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    background-image: url(../src/pizza.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    position: sticky;
+    opacity: .75;
+    width: 100%;
+    height: min-content;
+    background-color: var(--main);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text);
+}
+
+.linkContainer {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabDiv {
+    background-color: var(--accent);
+    width: 20%;
+    height: 50px;
+    justify-self: flex-end;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabDiv:hover {
+    background-color: var(--bg-color);
+    color: var(--accent);
+    cursor: pointer;
 }
