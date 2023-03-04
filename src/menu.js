@@ -2,10 +2,14 @@ function addMenu(main){
     const menuContent = document.createElement('div');
     menuContent.classList.add('menuContent');
 
+    const menuHeader = document.createElement('h2');
+    menuHeader.textContent = "Our Glorious Menu";
+
     for (let i = 0; i < 6; i++) {
         let e = document.createElement('div');
         let img = document.createElement('img');
-        let p = document.createElement('p');
+        let p = document.createElement('div');
+        p.classList.add('menuText')
         img.src = `../src/${i}.jpg`;
         e.appendChild(img);
         switch (i) {
@@ -31,7 +35,7 @@ function addMenu(main){
         e.appendChild(p);
         menuContent.appendChild(e);
     }
-
+    main.appendChild(menuHeader);
     main.appendChild(menuContent);
 }
 

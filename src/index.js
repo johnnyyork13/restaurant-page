@@ -3,6 +3,7 @@ const {buildHeader} = require('./header.js');
 const {defaultContent} = require('./default-content.js');
 const {buildFooter} = require('./footer.js');
 const {addMenu} = require('./menu.js');
+const {buildContact} = require('./contact.js');
 
 const mainContent = document.getElementById('mainContent');
 const tabDiv = document.getElementsByClassName('tabDiv');
@@ -19,6 +20,7 @@ function landingPageStructure(){
     const main = document.createElement('main');
     main.id = 'main';
     defaultContent(main);
+
     const footer = document.createElement('footer');
     buildFooter(footer);
 
@@ -34,8 +36,9 @@ for (let i = 0; i < mainElements.length; i++) {
 
 function clearMain() {
     const main = document.getElementById('main');
-    for (let i = 0; i < main.children.length; i++) {
-        main.children[i].remove();
+    const m = main.children.length;
+    for (let i = 0; i < m; i++) {
+        main.children[main.children.length - 1].remove();
     }
 }
 
@@ -53,6 +56,9 @@ function changePage(){
                     clearMain();
                     addMenu(main);
                     break;
+                case 'contact':
+                    clearMain();
+                    buildContact(main);
             }
         })
     }

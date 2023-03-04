@@ -21,12 +21,9 @@ function defaultContent(main){
             case 2:
                 p.textContent = "Order online or call us at 706-555-1234!";
                 break;
-        }console.log(main);
+        }
         bodyContent.appendChild(p);
     }
-
-
-    //add some sidebar stuff
 
     
     main.appendChild(bodyContent);
