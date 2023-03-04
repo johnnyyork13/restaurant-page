@@ -199,11 +199,12 @@ h2 {
     width: 100%;
     display: flex;
     align-items: center;
+    letter-spacing: 1px;
 }
 
 .info img {
     margin-right: 20px;
-    height: 30px;;
+    height: 30px;
 }
 
 footer {
