@@ -10,7 +10,7 @@ function addMenu(main){
         let img = document.createElement('img');
         let p = document.createElement('div');
         p.classList.add('menuText')
-        img.src = `../src/${i}.jpg`;
+        img.src = `./${i}.jpg`;
         e.appendChild(img);
         switch (i) {
             case 0:
