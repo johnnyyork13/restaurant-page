@@ -5,7 +5,7 @@ function defaultContent(main){
 
     const defaultImg = document.createElement('img');
     defaultImg.classList.add('defaultImg');
-    defaultImg.src = "../src/all-food.jpg";
+    defaultImg.src = "./all-food.jpg";
 
     bodyContent.appendChild(defaultImg);
     //add a few p elements to bodyContent

@@ -14,9 +14,9 @@ function buildContact(main){
     address.classList.add('info');
 
     const phoneImg = document.createElement('img');
-    phoneImg.src = '../src/phone.png';
+    phoneImg.src = './phone.png';
     const addressImg = document.createElement('img');
-    addressImg.src = '../src/house.png';
+    addressImg.src = './house.png';
 
     const phoneNumber = document.createElement('p');
     phoneNumber.textContent = '706-555-1234';
@@ -34,7 +34,7 @@ function buildContact(main){
 
     //create img for map
     const map = document.createElement('img');
-    map.src = '../src/map.png';
+    map.src = './map.png';
 
     contactContent.appendChild(contactInfo);
     contactContent.appendChild(map);
