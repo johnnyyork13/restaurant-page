@@ -9,7 +9,7 @@ function addMenu(main){
         let e = document.createElement('div');
         let img = document.createElement('img');
         let p = document.createElement('div');
-        p.classList.add('menuText')
+        p.classList.add('menuText');
         img.src = `./${i}.jpg`;
         e.appendChild(img);
         switch (i) {
